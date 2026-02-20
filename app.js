@@ -25,6 +25,28 @@ const pages = {
     <p>Próximo passo: carregar via fetch e criar componentes.</p>
     </section>
     `,
+    "/cursos": () => {
+        const cursos = ["Administração", "Desenvolvimento de Sistemas", "Logística", "Enfermagem"];
+        return `
+        <section class="card">
+        <h2>Cursos</h2>
+        <ul>
+            ${cursos.map((c) => `<li> ${c} </li>`).join("")}
+        </ul>
+        </section>
+        `;
+    },
+    "/professores": () => {
+        const professores = ["Mauricio", "Diego", "Andrei", "Enfermagem"];
+        return `
+        <section class="card">
+        <h2>Professores</h2>
+        <ul>
+            ${professores.map((p) => `<li> ${p} </li>`).join("")}
+        </ul>
+        </section>
+        `;
+    },
 };
 
 function setActiveLink(path) {
